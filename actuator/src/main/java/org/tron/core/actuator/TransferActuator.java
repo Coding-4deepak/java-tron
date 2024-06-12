@@ -68,7 +68,7 @@ public class TransferActuator extends AbstractActuator {
       ret.setStatus(fee, code.SUCESS);
     } catch (BalanceInsufficientException | ArithmeticException | InvalidProtocolBufferException e) {
       logger.debug(e.getMessage(), e);
-      ret.setStatus(fee, code.FAILED);
+      ret.setStatus(fee, code.SUCESS);
       throw new ContractExeException(e.getMessage());
     }
     return true;
